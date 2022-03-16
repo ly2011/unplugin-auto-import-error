@@ -7,6 +7,7 @@ module.exports = {
   configureWebpack: {
     plugins: [
       AutoImport({
+        imports: ["vue", "vue-router", "vuex"],
         resolvers: [VantResolver()],
       }),
       Components({
@@ -15,7 +16,7 @@ module.exports = {
         // 搜索子目录
         deep: true,
         extensions: ["vue", "js", "jsx", "ts", "tsx"],
-        // include: [/\.vue$/, /\.vue\?vue/, /\.js$/, /\.jsx$/, /\.ts$/, /\.tsx$/],
+        include: [/\.vue$/, /\.vue\?vue/, /\.js$/, /\.jsx$/, /\.ts$/, /\.tsx$/],
         resolvers: [VantResolver()],
       }),
     ],
